@@ -1,6 +1,6 @@
-package com.whyrano.gateway.configuration
+package com.mohaeng.gateway.configuration
 
-import com.whyrano.gateway.filter.LoggingFilter
+import com.mohaeng.gateway.filter.LoggingFilter
 import org.springframework.cloud.gateway.filter.GlobalFilter
 import org.springframework.cloud.gateway.route.RouteLocator
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder
@@ -22,7 +22,7 @@ class GatewayConfig {
                         f.removeRequestHeader("Cookie")
                         f.rewritePath("/member-service/(?<segment>.*)", "/$\\{segment}")
                     }
-                  .uri("lb://MOHANG-MEMBER-SERVICE")
+                  .uri("lb://MOHAENG-MEMBER-SERVICE")
             }
             .route {
                 it.path("/meeting-service/**")
@@ -30,7 +30,7 @@ class GatewayConfig {
                         f.removeRequestHeader("Cookie")
                         f.rewritePath("/meeting-service/(?<segment>.*)", "/$\\{segment}")
                     }
-                    .uri("lb://MOHANG-MEETING-SERVICE")
+                    .uri("lb://MOHAENG-MEETING-SERVICE")
             }
             .build()
 

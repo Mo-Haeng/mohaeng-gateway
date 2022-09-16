@@ -1,4 +1,4 @@
-package com.whyrano.gateway
+package com.mohaeng.gateway
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

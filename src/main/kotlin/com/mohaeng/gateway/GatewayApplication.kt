@@ -1,4 +1,4 @@
-package com.whyrano.gateway
+package com.mohaeng.gateway
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
